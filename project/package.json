@@ -1,1 +1,43 @@
-ewogICJuYW1lIjogInZpdGUtcmVhY3QtdHlwZXNjcmlwdC1zdGFydGVyIiwKICAicHJpdmF0ZSI6IHRydWUsCiAgInZlcnNpb24iOiAiMC4wLjAiLAogICJ0eXBlIjogIm1vZHVsZSIsCiAgInNjcmlwdHMiOiB7CiAgICAiZGV2IjogImNvbmN1cnJlbnRseSBcInZpdGVcIiBcIm5vZGUgc2VydmVyL2luZGV4LmpzXCIiLAogICAgImJ1aWxkIjogInZpdGUgYnVpbGQiLAogICAgImxpbnQiOiAiZXNsaW50IC4iLAogICAgInByZXZpZXciOiAidml0ZSBwcmV2aWV3IgogIH0sCiAgImRlcGVuZGVuY2llcyI6IHsKICAgICJheGlvcyI6ICJeMS42LjciLAogICAgImNvcnMiOiAiXjIuOC41IiwKICAgICJkb3RlbnYiOiAiXjE2LjQuNSIsCiAgICAiZXhwcmVzcyI6ICJeNC4xOC4zIiwKICAgICJleHByZXNzLXNlc3Npb24iOiAiXjEuMTguMCIsCiAgICAibHVjaWRlLXJlYWN0IjogIl4wLjM0NC4wIiwKICAgICJqc3ppcCI6ICJeMy4xMC4xIiwKICAgICJAbW9uYWNvLWVkaXRvci9yZWFjdCI6ICJeNC42LjAiLAogICAgInJlYWN0IjogIl4xOC4zLjEiLAogICAgInJlYWN0LWRvbSI6ICJeMTguMy4xIiwKICAgICJyZWFjdC1yb3V0ZXItZG9tIjogIl42LjIyLjIiLAogICAgInJlYWN0LXF1ZXJ5IjogIl4zLjM5LjMiCiAgfSwKICAiZGV2RGVwZW5kZW5jaWVzIjogewogICAgIkBlc2xpbnQvanMiOiAiXjkuOS4xIiwKICAgICJAdHlwZXMvcmVhY3QiOiAiXjE4LjMuNSIsCiAgICAiQHR5cGVzL3JlYWN0LWRvbSI6ICJeMTguMy4wIiwKICAgICJAdml0ZWpzL3BsdWdpbi1yZWFjdCI6ICJeNC4zLjEiLAogICAgImF1dG9wcmVmaXhlciI6ICJeMTAuNC4xOCIsCiAgICAiY29uY3VycmVudGx5IjogIl44LjIuMiIsCiAgICAiZXNsaW50IjogIl45LjkuMSIsCiAgICAiZXNsaW50LXBsdWdpbi1yZWFjdC1ob29rcyI6ICJeNS4xLjAtcmMuMCIsCiAgICAiZXNsaW50LXBsdWdpbi1yZWFjdC1yZWZyZXNoIjogIl4wLjQuMTEiLAogICAgImdsb2JhbHMiOiAiXjE1LjkuMCIsCiAgICAicG9zdGNzcyI6ICJeOC40LjM1IiwKICAgICJ0YWlsd2luZGNzcyI6ICJeMy40LjEiLAogICAgInR5cGVzY3JpcHQiOiAiXjUuNS4zIiwKICAgICJ0eXBlc2NyaXB0LWVzbGludCI6ICJeOC4zLjAiLAogICAgInZpdGUiOiAiXjUuNC4yIgogIH0KfQo=
+{
+  "name": "vite-react-typescript-starter",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"node server/index.js\"",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "express-session": "^1.18.0",
+    "lucide-react": "^0.344.0",
+    "jszip": "^3.10.1",
+    "@monaco-editor/react": "^4.6.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.22.2",
+    "react-query": "^3.39.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.9.1",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.18",
+    "concurrently": "^8.2.2",
+    "eslint": "^9.9.1",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.11",
+    "globals": "^15.9.0",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.3.0",
+    "vite": "^5.4.2"
+  }
+}
