@@ -1,39 +1,35 @@
 import axios from 'axios';
+import { encodeBase64, decodeBase64 } from './encoding';
 
+// Create two axios instances - one for our backend, one for GitHub API
 const api = axios.create({
   baseURL: 'http://localhost:3000',
   withCredentials: true
 });
 
+const githubApi = axios.create({
+  baseURL: 'https://api.github.com',
+  headers: {
+    Accept: 'application/vnd.github.v3+json'
+  }
+});
+
+// Helper to set GitHub token
+export const setGithubToken = (token: string) => {
+  githubApi.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+};
+
 export const getUser = async () => {
   const { data } = await api.get('/api/user');
+  // Set token for future GitHub API calls
+  if (data.access_token) {
+    setGithubToken(data.access_token);
+  }
   return data;
 };
 
-export const getRepositories = async () => {
-  const { data } = await api.get('/api/repos');
-  return data;
-};
-
-export const logout = async () => {
-  await api.get('/api/logout');
-};
-
-export const getRepositoryContents = async (owner: string, repo: string, path: string = '') => {
-  const { data } = await api.get(`/api/repos/${owner}/${repo}/contents/${path}`);
-  return data;
-};
-
-export const getFileContent = async (url: string) => {
-  const { data } = await api.get(url);
-  return data;
-};
-
-export const updateFile = async (owner: string, repo: string, path: string, content: string, sha: string) => {
-  const { data } = await api.put(`/api/repos/${owner}/${repo}/contents/${path}`, {
-    content: Buffer.from(content).toString('base64'),
-    message: `Update ${path}`,
-    sha
-  });
-  return data;
-};
+// Re-export all functionality from modular files
+export * from './auth';
+export * from './repositories';
+export * from './files';
+export * from './fileChanges';
